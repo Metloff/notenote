@@ -2,15 +2,23 @@ class NotesController < ApplicationController
   before_action :find_note, except: [:index, :new, :create]
 
   def index
+    @notes = Note.order('created_at DESC')
   end
 
   def show
   end
 
   def new
+    @note = Note.new
   end
 
   def create
+    @note = Note.new(note_params)
+    if @note.save
+      redirect_to @note
+    else
+      render 'new'
+    end
   end
 
   def edit
