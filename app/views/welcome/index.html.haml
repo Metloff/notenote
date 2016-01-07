@@ -1,2 +1,32 @@
-%h1 Welcome#index
-%p Find me in app/views/welcome/index.html.erb
+#banner
+	.banner_content
+		%h1 NoteNote
+		%p Your online notebook. Never forget an idea again.
+		%button= link_to 'Sign Up', new_user_session_path
+#testimonial
+	.wrapper
+		%p.quote "The greatest notebook application. Period"
+		%p.name - Henry Metlov
+
+#callouts
+	.callout_inner
+		.wrapper
+			.callout
+				%h2 Notes
+				%p Viral Echo Park Intelligentsia tattoed, craft beer organic authentic polaroid tousled saldkj sadfkjlhd
+			.callout
+				%h2 Rocket
+				%p Viral Echo Park Intelligentsia tattoed, craft beer organic authentic polaroid tousled saldkj sadfkjlhd
+			.callout
+				%h2 Lighting
+				%p Viral Echo Park Intelligentsia tattoed, craft beer organic authentic polaroid tousled saldkj sadfkjlhd
+
+#bottom_cta
+	.wrapper
+		%h2 For Realz!
+		%p I want you to sign up... If you don't, i will find you!
+		%button= link_to 'Click Meee!!!', new_user_registration_path
+
+%footer
+	%p &copy; Henry Metlov
+
