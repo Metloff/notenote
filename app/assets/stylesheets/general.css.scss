@@ -50,6 +50,18 @@ button, .button {
 	}
 }
 
+.btn {
+	border: none;
+	outline: none;
+	background: $green;
+	padding: 1rem 3.5rem;
+	border-radius: 2rem;
+	font-size: 1.4rem;
+	a {
+		color: white;
+		text-decoration: none;
+	}
+}
 .button {
 	color: white;
 	margin: 2rem 0;
