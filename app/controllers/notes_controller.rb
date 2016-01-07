@@ -2,7 +2,7 @@ class NotesController < ApplicationController
   before_action :find_note, except: [:index, :new, :create]
 
   def index
-    @notes = Note.order('created_at DESC')
+    @notes = Note.where(user_id: current_user)
   end
 
   def show
@@ -14,6 +14,7 @@ class NotesController < ApplicationController
 
   def create
     @note = current_user.notes.build(note_params)
+
     if @note.save
       redirect_to @note
     else
